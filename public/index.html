@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen">
+            <h1>Welcome to the Quiz App</h1>
+            <div id="quiz-list" class="quiz-list">
+                <!-- Quizzes will be loaded here -->
+            </div>
+        </div>
+
+
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <h2 id="quiz-title"></h2>
+                <div id="timer" class="timer">Time: <span id="time-left">--:--</span></div>
+            </div>
+            
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div id="question-container">
+                <h3 id="question-text"></h3>
+                <div id="options-list" class="options-list">
+                    <!-- Options will be loaded here -->
+                </div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="nav-btn">Previous</button>
+                <span id="question-number"></span>
+                <button id="next-btn" class="nav-btn">Next</button>
+            </div>
+
+            <button id="submit-btn" class="submit-btn hidden">Submit Quiz</button>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen hidden">
+            <h2>Quiz Results</h2>
+            <div class="score-container">
+                <div class="score">
+                    Score: <span id="score">0</span>/<span id="total">0</span>
+                </div>
+                <div class="percentage">
+                    <span id="percentage">0</span>%
+                </div>
+            </div>
+            <div id="results-breakdown" class="results-breakdown">
+                <!-- Results breakdown will be loaded here -->
+            </div>
+            <button id="restart-btn" class="restart-btn">Take Another Quiz</button>
+        </div>
+    </div>
+
+    <!-- Loading and Error indicators -->
+    <div id="loading-indicator" class="loading hidden"></div>
+    <div id="error-message" class="error-message hidden"></div>
+    
+    <script src="/app.js"></script>
+</body>
+</html>
