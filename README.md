@@ -228,53 +228,6 @@ npm run test:watch
 7. **Client-Side Timer**: Timer runs on client (can be synced with server for security)
 8. **No Image Support**: Text-only questions and options (images can be added)
 
-## 🎨 Customization
-
-### Changing Timer Duration
-
-Edit the timer value in `public/app.js`:
-```javascript
-let timeRemaining = 600; // Change value (in seconds)
-// 300 = 5 minutes
-// 600 = 10 minutes
-// 900 = 15 minutes
-```
-
-### Modifying Colors and Styling
-
-Edit CSS variables in `public/styles.css`:
-```css
-:root {
-  --primary-color: #6366f1;      /* Main theme color */
-  --success-color: #10b981;      /* Correct answers */
-  --error-color: #ef4444;        /* Wrong answers */
-  --warning-color: #f59e0b;      /* Timer warning */
-  --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-```
-
-### Adding New Sample Quizzes
-
-Edit `src/models/sampleData.js`:
-```javascript
-const sampleQuizzes = [
-  {
-    title: 'Your Quiz Title',
-    description: 'Quiz description',
-    duration: 600,
-    questions: [
-      {
-        text: 'Your question?',
-        type: 'single', // or 'multiple'
-        options: [
-          { text: 'Option 1', isCorrect: true },
-          { text: 'Option 2', isCorrect: false }
-        ]
-      }
-    ]
-  }
-];
-```
 
 Then reinitialize the database:
 ```bash
@@ -360,72 +313,17 @@ npm test -- --clearCache
 npm test
 ```
 
-## 📱 Browser Compatibility
-
-- ✅ Chrome 90+ (Recommended)
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Opera 76+
 
 **Note**: The application uses modern JavaScript features (ES6+). Internet Explorer is not supported.
 
-## 🚀 Future Enhancements
 
-### Planned Features
-- [ ] User authentication and profiles
-- [ ] Admin dashboard for quiz creation
-- [ ] Question bank management system
-- [ ] Quiz categories and difficulty levels
-- [ ] Leaderboard and ranking system
-- [ ] Time-per-question analytics
-- [ ] Export results to PDF/CSV
-- [ ] Social media sharing of scores
-- [ ] Question randomization option
-- [ ] Image/video support in questions
-- [ ] Real-time multiplayer quizzes
-- [ ] Email notifications for results
-- [ ] Quiz scheduling and expiration dates
-
-### Technical Improvements
-- [ ] Migrate to TypeScript for type safety
-- [ ] Add rate limiting to prevent abuse
-- [ ] Implement caching (Redis) for better performance
-- [ ] Add WebSocket for real-time features
-- [ ] Database migration system (Knex.js or Sequelize)
-- [ ] API documentation (Swagger/OpenAPI)
-- [ ] Docker containerization
-- [ ] CI/CD pipeline setup
-- [ ] Server-side timer validation
-- [ ] Question difficulty rating system
 
 ## 📄 License
 
 This project is licensed under the MIT License:
 
-```
-MIT License
+---
 
-Copyright (c) 2025 QuizMaster
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
 
 ## 🤝 Contributing
 
